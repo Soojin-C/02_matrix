@@ -23,6 +23,10 @@ def print_matrix( matrix ):
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
+    row = 0
+    col = 0
+    for each in matrix:
+        each[counter] = 0
     pass
 
 #multiply m1 by m2, modifying m2 to be the product
