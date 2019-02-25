@@ -3,13 +3,23 @@ from matrix import *
 
 
 def draw_lines( matrix, screen, color ):
-    pass
+    curr = 0
+    while (curr <= len(matrix) - 2):
+        curr_col = matrix[curr]
+        curr_end_col = matrix[curr + 1]
+        draw_line(curr_col[0], curr_col[1], curr_end_col[0], curr_end_col[1], screen, color)
+        curr += 2
+    # pass
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+    add_point(matrix, x0, y0, z0)
+    add_point(matrix, x1, y1, z1)
+    # pass
 
 def add_point( matrix, x, y, z=0 ):
-    pass
+    temp = [x, y, z, 1]
+    matrix.append(temp)
+    # pass
 
 
 
@@ -34,7 +44,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     if ( abs(x1-x0) >= abs(y1 - y0) ):
 
         #octant 1
-        if A > 0:            
+        if A > 0:
             d = A + B/2
 
             while x < x1:
